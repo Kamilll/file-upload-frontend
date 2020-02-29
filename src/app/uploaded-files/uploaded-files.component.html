@@ -1,0 +1,9 @@
+<h3>Currently uploaded files</h3>
+<a *ngFor="let file of files" href='{{file.downloadUri}}' target='_blank'>
+    <mat-card class="file-card">
+        <mat-card-header>
+            <mat-card-title>{{file.name}}</mat-card-title>
+            <mat-card-subtitle>{{file.lastModified}}</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</a>

@@ -1,0 +1,8 @@
+<div>
+    <form>
+        <div class="upload-container" appDragDropUpload (click)="fileField.click()" (fileDropped)="upload($event)">
+            <span class="upload-container-hint">Choose files or drag them here...</span>
+            <input type="file" #fileField (change)="upload($event.target.files)" hidden multiple>
+        </div>
+    </form>
+</div>
