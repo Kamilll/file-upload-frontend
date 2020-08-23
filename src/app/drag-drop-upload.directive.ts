@@ -7,7 +7,7 @@ export class DragDropUploadDirective {
 
   @Output() fileDropped = new EventEmitter<FileList>();
 
-  @HostBinding('style.background-color') private background = '#ffffff'
+  @HostBinding('style.background-color') private background;
 
   @HostListener('dragover', ['$event']) dragOver(event) {
     event.preventDefault();
@@ -27,7 +27,6 @@ export class DragDropUploadDirective {
     this.background = '#ffffff';
     event.preventDefault();
     event.stopPropagation();
-    console.log("directive")
     if (event.dataTransfer.files.length > 0) {
       this.fileDropped.emit(event.dataTransfer.files)
     }

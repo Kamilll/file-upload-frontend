@@ -15,7 +15,6 @@ export class DragDropComponent implements OnInit {
   upload(e) {
     const fileListAsArray = Array.from(e);
     console.log('Request has been made!');
- 
-  }
+   }
 
 }
